@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function DataTable({ data, onPress, expanded }) {
 
   return (
-    <div className="card w-full bg-slate-50 shadow-sm hover:shadow-lg transition-all" onClick={onPress}>
+    <div className="card w-full bg-slate-50 shadow-sm hover:shadow-lg transition-all hover:scale-[102%]" onClick={onPress}>
       <div className="card-body">
         <h2 className="card-title capitalize">{ data.role }</h2>
         <table className="table table-compact w-full">

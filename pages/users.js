@@ -4,6 +4,7 @@ import { collection, onSnapshot, query } from "firebase/firestore";
 import DataTable from "../components/DataTable";
 import { Inter } from "@next/font/google";
 import { ref, getDownloadURL } from "firebase/storage";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,10 +36,13 @@ export default function Users() {
 
   return (
     <main className="w-screen h-screen">
-      <header className="header w-11/12 p-6 m-2 border border-dashed border-slate-500">
-        <h1 className={`${inter.className} text-6xl font-semibold`}>
+      <header className="header w-11/12 p-6 m-2 border border-dashed border-slate-500 flex gap-8">
+        <h1 className={`${inter.className} text-6xl font-semibold w-2/3`}>
           User Applications
         </h1>
+        <nav className="flex items-center w-1/3 justify-end pr-8">
+          <Link href="/contact" className="link link-hover text-xl">Contact</Link>
+        </nav>
       </header>
       <div className="flex h-full mt-6 items-center justify-center gap-8">
         <div className="left h-full w-[45%] align-middle gap-6 items-center flex flex-col">
